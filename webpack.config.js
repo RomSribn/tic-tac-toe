@@ -23,7 +23,8 @@ module.exports = {
             {
                 test: /\.hbs$/,
                 exclude: /node_modules/,
-                use: "handlebars-loader" }
+                use: "handlebars-loader"
+            },
         ],
 
     },
