@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tic-Tac-Toe</title>
+</head>
+<body>
+<div class="container">
+	<h1>tic-tack-toe</h1>
+	<ul id="game">
+		<!-- first row -->
+		<li data-pos="0"></li>
+		<li data-pos="1"></li>
+		<li data-pos="2"></li>
+		<!-- second row -->
+		<li data-pos="3"></li>
+		<li data-pos="4"></li>
+		<li data-pos="5"></li>
+		<!-- third row -->
+		<li data-pos="6"></li>
+		<li data-pos="7"></li>
+		<li data-pos="8"></li>
+	</ul>
+	<div class="btn">
+		<button id="reset-game">
+			<span>Start Game</span>
+		</button>
+		<div class="spin hidden">
+			<svg class="spinner" width="30px" height="30px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+				<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+			</svg>
+		</div>
+	</div>
+	<div class="info">
+		<h2>Score Card</h2>
+		<div id="score">
+			Player 1: <span id="player-one-score">0</span> <br />
+			Bot : <span id="player-two-score">0</span> <br />
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

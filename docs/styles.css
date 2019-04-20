@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600, 800);
+body{
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    background-color: #485b6e;
+    color: #f1f1f1;
+    font-weight: 700;
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+.hidden{
+    visibility: hidden;
+}
+h1{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#game {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #dadada;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 20px;
+    opacity: 0.2;
+}
+
+#game > li {
+    list-style: none;
+    float: left;
+    overflow: hidden;
+    text-decoration:none;
+    width: 100px;
+    height: 100px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#game > li.x {
+    font-size: 50px;
+    color: #ed4e6e;
+    font-weight: 700;
+}
+
+#game > li.o {
+    font-size: 50px;
+    color: #485b6e;
+    font-weight: 700;
+}
+
+#game > li:hover {
+    background: #f9f9f9;
+}
+
+#game > li:active {
+    width: 100px;
+    height: 100px;
+    border: 0;
+}
+#reset-game {
+    text-align: center;
+    border: none;
+    padding: 0.6em 1.2em;
+    background: #ed4e6e;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 2px;
+    border-radius: 2px;
+    max-width: 155px;
+}
+
+#reset-game:hover {
+    background: #2c3e52;
+}
+.btn{
+    margin-left: 30px;
+}
+.btn>*{
+   display: inline-block;
+
+}
+.spin>*{
+    margin-bottom: -8px;
+}
+
+.spinner {
+    animation: rotator 1.4s linear infinite;
+}
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+.path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+@keyframes colors {
+    0% {
+        stroke: #f8f9f9;
+    }
+    25% {
+        stroke: #ebedee;
+    }
+    50% {
+        stroke: #dee1e3;
+    }
+    75% {
+        stroke: #cfd3d6;
+    }
+    100% {
+        stroke: #bec4c8;
+    }
+}
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 187;
+    }
+    50% {
+        stroke-dashoffset: 46.75;
+        transform: rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: 187;
+        transform: rotate(450deg);
+    }
+}
+
