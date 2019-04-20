@@ -86,6 +86,7 @@ function handleClick(evt) {
                     console.log(data);
                     if(Object.keys(data).includes("win")){
                         $spinner.classList.add("hidden");
+                        $gameBord.removeEventListener("click", handleClick);
                         if(data.win === 1){
                             player1Score += 1;
                         }
@@ -93,10 +94,6 @@ function handleClick(evt) {
                             player1Score += 1;
                             player2Score += 1;
                         }
-                        if(data.win === 0){
-                            player2Score += 1;
-                        }
-                        $gameBord.removeEventListener("click", handleClick)
                     }
                     return waitMove();
                 })
@@ -109,6 +106,9 @@ function handleClick(evt) {
                     console.log(response);
                     $spinner.classList.add("hidden");
                     botsMove(response.data.move);
+                    if(response.data.win === 0){
+                        player2Score += 1;
+                    }
                 })
 
 
