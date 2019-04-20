@@ -11,6 +11,9 @@ body{
     margin-left: auto;
     margin-top: 10%;
 }
+.hidden{
+    visibility: hidden;
+}
 h1{
     font-weight: 600;
     text-transform: uppercase;
@@ -22,6 +25,7 @@ h1{
     margin: 0 auto;
     padding: 0;
     margin-bottom: 20px;
+    opacity: 0.2;
 }
 
 #game > li {
@@ -81,4 +85,14 @@ h1{
 
 #reset-game:hover {
     background: #2c3e52;
+}
+.btn{
+    margin-left: 30px;
+}
+.btn>*{
+   display: inline-block;
+
+}
+.spin>*{
+    margin-bottom: -8px;
 }
